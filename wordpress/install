@@ -1,0 +1,21 @@
+#!/bin/bash
+while getopts u:t: option
+do
+case "${option}"
+in
+u) UUID=${OPTARG};;
+t) TOKEN=${OPTARG};;
+esac
+done
+
+touch $HOME/logs/$UUID.log
+echo $UUID >> $HOME/logs/$UUID.log
+echo $TOKEN >> $HOME/logs/$UUID.log
+
+# get the tarball
+# extract it
+# make database via api
+# get DB name and pwd from api
+# import sql using db info
+# update wp-config.php with db info
+
