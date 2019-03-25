@@ -11,12 +11,12 @@ n) APP_NAME=${OPTARG};;
 esac
 done
 
-touch $HOME/logs/$UUID.log
-echo $UUID >> $HOME/logs/$UUID.log
-echo $TOKEN >> $HOME/logs/$UUID.log
-echo $APP_LOG >> $HOME/logs/$UUID.log
-echo $APP_USER >> $HOME/logs/$TOKEN.log
-echo $APP_NAME >> $HOME/logs/$UUID.log
+touch $APP_LOG
+echo $UUID >> $APP_LOG
+echo $TOKEN >> $APP_LOG
+echo $APP_LOG >> $APP_LOG
+echo $APP_USER >> $APP_LOG
+echo $APP_NAME >> $APP_LOG
 
 # get the tarball
 # extract it
