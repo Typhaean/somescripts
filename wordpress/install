@@ -1,16 +1,22 @@
 #!/bin/bash
-while getopts u:t: option
+while getopts i:t:l:u:n: option
 do
 case "${option}"
 in
-u) UUID=${OPTARG};;
+i) UUID=${OPTARG};;
 t) TOKEN=${OPTARG};;
+l) APP_LOG=${OPTARG};;
+u) APP_USER=${OPTARG};;
+n) APP_NAME=${OPTARG};;
 esac
 done
 
 touch $HOME/logs/$UUID.log
 echo $UUID >> $HOME/logs/$UUID.log
 echo $TOKEN >> $HOME/logs/$UUID.log
+echo $APP_LOG >> $HOME/logs/$UUID.log
+echo $APP_USER >> $HOME/logs/$TOKEN.log
+echo $APP_NAME >> $HOME/logs/$UUID.log
 
 # get the tarball
 # extract it
